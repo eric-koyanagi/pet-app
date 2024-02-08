@@ -5,7 +5,9 @@ services:
     #image: php:8.1 
     build: .  
     ports:
-      - "80:80"         
+      - "80:80"
+    volumes:         
+      - ./:/var/www/html
     environment:
       - APP_ENV=dev  # Set environment variable for Symfony's dev mode 
 
